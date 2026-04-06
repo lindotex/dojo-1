@@ -11,6 +11,8 @@ config_version=5
 [application]
 
 config/name="Dojo_1"
+config/tags=PackedStringArray("demo")
+run/main_scene="uid://cwiqw3ifnqr0l"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="uid://q60ouvq0n7om"
 
@@ -32,6 +34,10 @@ folder_colors={
 "res://Scripts/Utils/": "blue",
 "res://Sound/": "green"
 }
+
+[global_group]
+
+player_group=""
 
 [input]
 

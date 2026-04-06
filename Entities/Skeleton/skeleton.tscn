@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cai0seviv55lp"]
 
 [ext_resource type="Texture2D" uid="uid://dgtv7k8qxdhbh" path="res://Assets/Entities/Skeleton/Skeleton Idle.png" id="1_ijx28"]
+[ext_resource type="Script" uid="uid://dvl88ug8hymag" path="res://Entities/Skeleton/skeleton.gd" id="1_lgixn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lgixn"]
 atlas = ExtResource("1_ijx28")
@@ -91,6 +92,7 @@ animations = [{
 height = 92.0
 
 [node name="Skeleton" type="CharacterBody2D" unique_id=1664036683]
+script = ExtResource("1_lgixn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=562897156]
 position = Vector2(-40, -128)
@@ -102,9 +104,5 @@ frame_progress = 0.5766538
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1306838924]
-position = Vector2(-2, -48)
-shape = SubResource("CapsuleShape2D_ijx28")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1979333899]
-position = Vector2(-2, -48)
+position = Vector2(-7, -50)
 shape = SubResource("CapsuleShape2D_ijx28")

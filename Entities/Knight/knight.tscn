@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dn4mfq5j1ptkf"]
 
 [ext_resource type="Texture2D" uid="uid://yyi8aftmcis0" path="res://Assets/Entities/Knight/_Idle.png" id="1_bbiv1"]
+[ext_resource type="Script" uid="uid://bt0oe1214ooup" path="res://Entities/Knight/knight.gd" id="1_d7s0k"]
 [ext_resource type="Texture2D" uid="uid://dru2tl3w2gbpw" path="res://Assets/Entities/Knight/_Run.png" id="2_mk422"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mk422"]
@@ -161,19 +162,16 @@ radius = 12.0
 height = 112.0
 
 [node name="Knight" type="CharacterBody2D" unique_id=157578089]
+script = ExtResource("1_d7s0k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1328330203]
 position = Vector2(-180, -241)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_pns0g")
-animation = &"run"
-autoplay = "run"
+animation = &"idle"
+autoplay = "idle"
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1875994936]
-position = Vector2(-3, -59)
-shape = SubResource("CapsuleShape2D_jmate")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=419665896]
-position = Vector2(-3, -59)
+position = Vector2(-13, -59)
 shape = SubResource("CapsuleShape2D_jmate")

@@ -745,7 +745,7 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iplt1"]
 radius = 3.0
 
-[node name="Player" type="CharacterBody2D" unique_id=965978219]
+[node name="Player" type="CharacterBody2D" unique_id=965978219 groups=["player_group"]]
 script = ExtResource("1_3uyv8")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1974544032]

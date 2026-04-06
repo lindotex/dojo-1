@@ -1,8 +1,7 @@
 class_name CallableStateMachine
 
-var state_dictionary : Dictionary
+var state_dictionary  = {}
 var current_state : String 
-
 
 func add_states(
 	normal_state_callable: Callable,
@@ -15,19 +14,16 @@ func add_states(
 		"leave": leave_state_callable
 	}
 
-
-func set_innitial_state(state_callable: Callable):
+func set_initial_state(state_callable: Callable):
 	var state_name = state_callable.get_method()
 	if state_dictionary.has(state_name):
 		_set_state(state_name)
 	else:
 		push_warning("State '%s' not found in state dictionary." % state_name)
 
-
 func update():
 	if current_state != null:
 		(state_dictionary[current_state].normal as Callable).call()
-
 
 func change_state(state_callable: Callable):
 	var state_name = state_callable.get_method()
@@ -36,9 +32,8 @@ func change_state(state_callable: Callable):
 	else:
 		push_warning("State '%s' not found in state dictionary." % state_name)
 
-
-func _set_state(state_name: String):
-	if current_state != null:
+func _set_state(state_name: StringName):
+	if current_state:
 		var leave_callable = state_dictionary[current_state].leave as Callable
 		if !leave_callable.is_null():
 			leave_callable.call()
