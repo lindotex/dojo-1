@@ -1,7 +1,7 @@
 # Useful tutorials
 
 ## Backend
-
+- [Animation Tree State Machine Setup w/ Conditions & BlendSpace2D](https://www.youtube.com/watch?v=WrMORzl3g1U)
 - [Advanced Stats System in Godot](https://www.youtube.com/watch?v=vsBb9921GfA)
 - [How to Create Intelligent AI in Godot 4](https://www.youtube.com/watch?v=gAk3xl5fBsM)
 
