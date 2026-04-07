@@ -1,5 +1,6 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
+@export var status : Stats
 @onready var sprite : AnimatedSprite2D = $Sprite2D
 
 const SPEED : float = 380.0

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bsqswxs1mjbrs" path="res://Entities/Player/player.gd" id="1_3uyv8"]
 [ext_resource type="Texture2D" uid="uid://3p2u5pn6jb78" path="res://Assets/Entities/Player/Idle 48x48.png" id="2_lu8i8"]
 [ext_resource type="Texture2D" uid="uid://dp343ayvmjhca" path="res://Assets/Entities/Player/air spin 48x48.png" id="2_owvpp"]
+[ext_resource type="Script" uid="uid://ccotcclmcyg2n" path="res://Scripts/Utils/Stats.gd" id="2_xr8lj"]
 [ext_resource type="Texture2D" uid="uid://cbejqco11mrqx" path="res://Assets/Entities/Player/run 48x48.png" id="3_tekja"]
 [ext_resource type="Texture2D" uid="uid://cssgfd8rc40yg" path="res://Assets/Entities/Player/Crouch-Idle 48x48.png" id="3_xr8lj"]
 [ext_resource type="Texture2D" uid="uid://bjc6kkpodpvlt" path="res://Assets/Entities/Player/crouch-walk 48x48.png" id="4_r8fok"]
@@ -13,6 +14,15 @@
 [ext_resource type="Texture2D" uid="uid://coqms8o1uq1yt" path="res://Assets/Entities/Player/land 48x48.png" id="10_ppdlg"]
 [ext_resource type="Texture2D" uid="uid://j4xmnmyf55l0" path="res://Assets/Entities/Player/Roll 48x48.png" id="11_v7p16"]
 [ext_resource type="Texture2D" uid="uid://dd3qe3er7knrb" path="res://Assets/Entities/Player/Walk 48x48.png" id="13_a8wow"]
+
+[sub_resource type="Resource" id="Resource_r8fok"]
+resource_local_to_scene = true
+script = ExtResource("2_xr8lj")
+base_max_health = 100.0
+base_max_stamina = 10.0
+base_attack_power = 10.0
+base_defense_power = 10.0
+metadata/_custom_type_script = "uid://ccotcclmcyg2n"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_avsg8"]
 atlas = ExtResource("2_owvpp")
@@ -747,6 +757,7 @@ radius = 3.0
 
 [node name="Player" type="CharacterBody2D" unique_id=965978219 groups=["player_group"]]
 script = ExtResource("1_3uyv8")
+status = SubResource("Resource_r8fok")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1974544032]
 position = Vector2(-24, -40)

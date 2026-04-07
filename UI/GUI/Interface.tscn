@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dmb5ldggwaunv"]
+
+[ext_resource type="Script" uid="uid://dv4fxwsyrew1k" path="res://UI/GUI/interface.gd" id="1_vpy1v"]
+
+[sub_resource type="Theme" id="Theme_vpy1v"]
+
+[node name="Interface" type="Control" unique_id=448539596]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vpy1v")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=616217377]
+layout_mode = 0
+offset_right = 68.0
+offset_bottom = 50.0
+theme = SubResource("Theme_vpy1v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1268762866]
+layout_mode = 2
+
+[node name="Health" type="Label" parent="PanelContainer/VBoxContainer" unique_id=702899417]
+layout_mode = 2
+text = "Health: "
+
+[node name="Stamina" type="Label" parent="PanelContainer/VBoxContainer" unique_id=614486076]
+layout_mode = 2
+text = "Stamina:"

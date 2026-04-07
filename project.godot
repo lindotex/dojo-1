@@ -31,8 +31,9 @@ folder_colors={
 "res://Entities/": "yellow",
 "res://Scenes/": "purple",
 "res://Scripts/": "red",
-"res://Scripts/Utils/": "blue",
-"res://Sound/": "green"
+"res://Scripts/Utils/": "red",
+"res://Sound/": "green",
+"res://UI/": "gray"
 }
 
 [global_group]

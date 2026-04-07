@@ -6,7 +6,8 @@ This todo list outlines the steps to complete a Minimum Viable Product (MVP) for
 - [ ] Implement player state machine using callable_state_machine.gd
 - [ ] Add animation state transitions (idle, run, jump, fall, attack, hurt, death)
 - [ ] Implement attack mechanics (basic attack, combo attacks)
-- [ ] Add player health system and damage handling
+- [x] Add player health system and damage handling
+- [x] Add player buff system
 - [ ] Implement player death and respawn logic
 - [ ] Add crouch and roll mechanics
 - [ ] Implement wall climbing/sliding if desired
