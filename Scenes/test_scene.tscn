@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://dn4mfq5j1ptkf" path="res://Entities/Knight/knight.tscn" id="3_50ct6"]
 [ext_resource type="PackedScene" uid="uid://cai0seviv55lp" path="res://Entities/Skeleton/skeleton.tscn" id="4_hb2xm"]
 [ext_resource type="Texture2D" uid="uid://5ytfycik3y1f" path="res://Assets/Tileset/Props/GrassLand_TallGrass_1.png" id="4_rdbpf"]
-[ext_resource type="Script" uid="uid://ccotcclmcyg2n" path="res://Scripts/Utils/Stats.gd" id="6_yglu3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rdbpf"]
 texture = ExtResource("1_x033f")
@@ -603,15 +602,6 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_hb2xm")
 
-[sub_resource type="Resource" id="Resource_d3awe"]
-resource_local_to_scene = true
-script = ExtResource("6_yglu3")
-base_max_health = 100.0
-base_max_stamina = 10.0
-base_attack_power = 10.0
-base_defense_power = 10.0
-metadata/_custom_type_script = "uid://ccotcclmcyg2n"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oho3u"]
 texture = ExtResource("4_rdbpf")
 0:0/0 = 0
@@ -622,6 +612,7 @@ sources/0 = SubResource("TileSetAtlasSource_oho3u")
 [node name="TestScene" type="Node" unique_id=1174064856]
 
 [node name="Interface" parent="." unique_id=448539596 node_paths=PackedStringArray("player") instance=ExtResource("1_d3awe")]
+visible = false
 offset_left = -31.0
 offset_top = -202.0
 offset_right = -31.0
@@ -651,7 +642,6 @@ tile_set = SubResource("TileSet_ak5v8")
 [node name="Player" parent="Entities" unique_id=965978219 instance=ExtResource("1_r5l72")]
 position = Vector2(0, -3)
 scale = Vector2(3, 3)
-status = SubResource("Resource_d3awe")
 
 [node name="Knight" parent="Entities" unique_id=157578089 instance=ExtResource("3_50ct6")]
 position = Vector2(-161, -1)
@@ -661,7 +651,7 @@ position = Vector2(-274, -4)
 
 [node name="Sound" type="Node" parent="." unique_id=1274765986]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sound" unique_id=356586865]
+[node name="SFXAudio" type="AudioStreamPlayer" parent="Sound" unique_id=356586865]
 
 [node name="TallGrass" type="TileMapLayer" parent="." unique_id=395795136]
 tile_map_data = PackedByteArray("AAAPAAEAAAAAAAAAAAD+////AAAAAAAAAAD4////AAAAAAAAAADq////AAAAAAAAAABEAAsAAAAAAAAAAAA9AAsAAAAAAAAAAAA+AAsAAAAAAAAAAAArAAsAAAAAAAAAAAAdAAsAAAAAAAAAAADZ/wUAAAAAAAAAAADQ/wUAAAAAAAAAAADh////AAAAAAAAAADk////AAAAAAAAAAADAAcAAAAAAAAAAAAJAAcAAAAAAAAAAAALAAcAAAAAAAAAAAAbAP3/AAAAAAAAAAAiAP3/AAAAAAAAAAAkAP3/AAAAAAAAAAA=")

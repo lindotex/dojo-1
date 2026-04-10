@@ -7,5 +7,5 @@ class_name Interface extends Node
 
 
 func _process(_delta: float) -> void:
-	health.text = "Health: " + str(player.status.base_max_health) 
-	stamina.text = "Stamina: " + str(player.status.base_max_stamina)
+	health.text = "Health: " + str(player.player_status.base_max_health) 
+	stamina.text = "Stamina: " + str(player.player_status.base_max_stamina)
